@@ -23,15 +23,17 @@ Non-Standard Python Libraries:
 
 ## Usage:
 
-`usage: spaces_finder.py [-h] [-D] [-t THREADS] -l HOSTLIST [-g GREPWORDS] [-m MAXSIZE]`
+```
+usage: python3 spaces_finder.py [-h] [-D] [-t THREADS] -l HOSTLIST [-g GREPWORDS] [-m MAXSIZE]
 
-`optional arguments:`
-`  -h, --help    show this help message and exit`
-`  -D            Download files. This requires significant diskspace`
-`  -d            If set to 1 or True, create directories for each host w/ results`
-`  -t THREADS    number of threads`
- ` -l HOSTLIST`
- ` -g GREPWORDS  Provide a wordlist to grep for`
-  `-m MAXSIZE    Maximum file size to download.`
-  
- `python spaces_finder.py -l SpacesNames.txt -g interesting_keywords.txt -D -m 500000 -d 1 -t 5`
+optional arguments:
+  -h, --help    show this help message and exit`
+  -D            Download files. This requires significant diskspace`
+  -d            If set to 1 or True, create directories for each host w/ results`
+  -t THREADS    number of threads`
+  -l HOSTLIST`
+  -g GREPWORDS  Provide a wordlist to grep for`
+  -m MAXSIZE    Maximum file size to download.`
+```
+
+`python3 spaces_finder.py -l SpacesNames.txt -g interesting_keywords.txt -D -m 500000 -d 1 -t 5`
