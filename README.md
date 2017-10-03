@@ -23,7 +23,7 @@ Non-Standard Python Libraries:
 
 ## Usage:
 
-`usage: spaces_finder.py [-h] [-D] [-t THREADS] -l HOSTLIST [-g GREPWORDS] [-m MAXSIZE]`
+`usage: python3 spaces_finder.py [-h] [-D] [-t THREADS] -l HOSTLIST [-g GREPWORDS] [-m MAXSIZE]`
 
 `optional arguments:`
 `  -h, --help    show this help message and exit`
