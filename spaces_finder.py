@@ -28,6 +28,7 @@ download_q = Queue()
 grep_list=None
 
 arguments = None
+total_public_spaces = 0
 
 # DigitalOcean Spaces URL has a region field but for now there is only one, 'nyc3'
 regions = ['nyc3']
@@ -133,8 +134,11 @@ def print_banner():
         '''
         )   
 
-def cleanUp():
+def cleanup():
    print("[-] Cleaning Up Files")
+
+def public_spaces_count():
+    print("\033[1;32m[*] Total number of public Spaces found - {}\033[1;m".format(total_public_spaces))
 
 def status403(line):
     print("[!]" + line.rstrip() + " is not accessible")
@@ -145,6 +149,9 @@ def queue_up_download(filepath):
     write_interesting_file(filepath)
 
 def status200(response,grep_list,line):
+    global total_public_spaces
+    total_public_spaces += 1
+    print("\033[1;31m[*] {} is publicly accessible\033[1;m".format(line.rstrip()))
     print("[+] Pilfering "+line.rstrip())
     objects=xmltodict.parse(response.text)
     Keys = []
@@ -166,6 +173,7 @@ def status200(response,grep_list,line):
                     break
         else:
             queue_up_download(collectable)
+    return total_public_spaces
 
 def main():
     global arguments
@@ -223,7 +231,8 @@ def main():
     if arguments.download:
         download_q.join()
 
-    cleanUp()
+    public_spaces_count()
+    cleanup()
 
 if __name__ == "__main__":
     main()
