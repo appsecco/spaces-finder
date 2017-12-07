@@ -30,8 +30,8 @@ grep_list=None
 arguments = None
 total_public_spaces = 0
 
-# DigitalOcean Spaces URL has a region field but for now there is only one, 'nyc3'
-regions = ['nyc3']
+# Regions available for DigitalOcean Spaces - 'nyc3', 'ams3'
+regions = ['nyc3', 'ams3']
 
 def fetch(url):
     print('[+] fetching ' + url)
