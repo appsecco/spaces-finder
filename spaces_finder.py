@@ -31,11 +31,15 @@ arguments = None
 total_public_spaces = 0
 
 # Regions available for DigitalOcean Spaces - 'nyc3', 'ams3'
-regions = ['nyc3', 'ams3']
+regions = ['nyc3', 'ams3', 'sgp1']
 
 def fetch(url):
     print('[+] fetching ' + url)
-    response = requests.get(url)
+    try:
+        response = requests.get(url)
+    except requests.exceptions.RequestException as e:  # This is the correct syntax
+        print(e)
+        sys.exit(1)
     if response.status_code == 403 or response.status_code == 404:
         status403(url)
     if response.status_code == 200:
