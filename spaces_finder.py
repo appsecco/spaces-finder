@@ -31,7 +31,7 @@ arguments = None
 total_public_spaces = 0
 
 # Regions available for DigitalOcean Spaces - 'nyc3', 'ams3'
-regions = ['nyc3', 'ams3', 'sgp1', 'sfo2']
+regions = ['nyc3', 'ams3', 'sgp1', 'sfo2', 'fra1']
 
 def fetch(url):
     print('[+] fetching ' + url)
