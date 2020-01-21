@@ -1,7 +1,7 @@
 # Spaces finder
 
  #### Spaces finder is a tool to quickly enumerate [DigitalOcean Spaces](https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces) to look for loot. It's similar to a subdomain bruteforcer but is made specifically for DigitalOcean Spaces and also has some extra features that allow you to grep for delicious files as well as download interesting files if you're not afraid to quickly fill up your hard drive.
- #### By [Bharath](https://twitter.com/yamakira_)
+ #### By [Bharath](https://twitter.com/0xbharath)
  #### Built on top of AWSBucketDump by [@ok_bye_now](https://twitter.com/ok_bye_now)
 
 ## Pre-Requisites

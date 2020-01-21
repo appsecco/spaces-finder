@@ -8,8 +8,8 @@
 # Built on top of AWSBucketDump by Jordan Potti(@ok_bye_now)
 
 __author__ = "Bharath"
-__twitter__ = "yamakira_"
-__version__ = "0.0.1"
+__twitter__ = "0xbharath"
+__version__ = "0.0.2"
 
 from argparse import ArgumentParser
 import codecs
@@ -30,7 +30,7 @@ grep_list=None
 arguments = None
 total_public_spaces = 0
 
-# Regions available for DigitalOcean Spaces - 'nyc3', 'ams3'
+# Regions available for DigitalOcean Spaces
 regions = ['nyc3', 'ams3', 'sgp1', 'sfo2', 'fra1']
 
 def fetch(url):
@@ -134,7 +134,7 @@ def print_banner():
         delicous files as well as download interesting files if you're not
         afraid to quickly fill up your hard drive.
 
-        by yamakira_
+        by 0xbharath
         '''
         )   
 
@@ -145,7 +145,7 @@ def public_spaces_count():
     print("\033[1;32m[*] Total number of public Spaces found - {}\033[1;m".format(total_public_spaces))
 
 def status403(line):
-    print("[!]" + line.rstrip() + " is not accessible")
+    print("[!] " + line.rstrip() + " is not accessible")
 
 def queue_up_download(filepath):
     download_q.put(filepath)
